@@ -62,6 +62,8 @@
     "clean": "rm -rf dist && rm -rf src/abis/types",
     "compile-abis": "typechain --target ethers-v5 --out-dir 'src/abis/types' 'src/abis/**/*.json'",
     "prebuild": "yarn clean && yarn compile-abis",
+    "wclean": "rmdir /s /q dist && rmdir /s /q src\\abis\\types",
+    "wprebuild": "yarn clean && yarn compile-abis",
     "build": "yarn lint && rollup -c",
     "test": "yarn lint && mocha",
     "lint": "eslint src --ext .ts"
